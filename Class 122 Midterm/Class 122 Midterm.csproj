@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Product.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DesignData Include="Product.cs" />
+  </ItemGroup>
+
 </Project>

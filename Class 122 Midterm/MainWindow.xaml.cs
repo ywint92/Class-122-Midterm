@@ -20,7 +20,8 @@ namespace Class_122_Midterm
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<product> products = new List<product>();
+        List<Product> products = new List<Product>();
+        Product currentProduct = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace Class_122_Midterm
         {
 
             Random rand = new Random();
+           
             int end = 106;
 
             for (int i = 100; i < end; i++)
@@ -70,14 +72,37 @@ namespace Class_122_Midterm
             }
         }
 
+        public string DisplayInformationToRun(Product product)
+        {
+            string formattedString = $"" +
+                $"Product Name: {product.Name}\n" +
+                $"Sku: {product.Sku}\n";
+
+            if(product.inStock)
+            {
+              formattedString += $"This product is in stock";
+
+            }
+            else 
+            {
+
+              
+                formattedString += $"This product is out of stock";
+            }
+
+            return formattedString;
+        }
+
         private void lbProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int selectedIndex = lbProducts.SelectedIndex;
+            currentProduct = products[selectedIndex];
 
+            DisplayInformation();
+            DisplayInformationToRun(currentProduct);
         }
-
-        private void lbProducts_Drop(object sender, DragEventArgs e)
-        {
-
-        }
+        
+           
     }
+
 }

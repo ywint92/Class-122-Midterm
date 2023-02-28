@@ -5,9 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Class_122_Midterm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="lbProducts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="258,49,258,49"/>
+        Title="MainWindow" Height="648" Width="944">
+    <Grid x:Name="Midterm" Background="#FF01679C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbProducts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="1,0,624,142" Drop="lbProduct_Drop" Background="#FFEBE4F1"/>
+        <RichTextBox x:Name="Notes" Margin="608,1,4,313" TextChanged="RichTextBox_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="runDisplayInformation" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="lbCurrent_Product" Content="Total Apartments:" HorizontalAlignment="Right" Margin="0,547,700,0" VerticalAlignment="Top" Height="56" Width="244" FontSize="16"/>
+        <ComboBox HorizontalAlignment="Left" Margin="346,28,0,0" VerticalAlignment="Top" Width="227" Height="360">
+            <Button Content="Button"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="617,372,0,0" VerticalAlignment="Top" Width="285" Height="244" BorderBrush="#FFED2323" Background="#FFF51515">
+            <Label Content="Label"/>
+            <Label Content="Label"/>
+            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
+        </ComboBox>
+        <Button x:Name="lbMonthly_DuesProduct" Content="Monthly Dues" HorizontalAlignment="Left" Margin="348,472,0,0" VerticalAlignment="Top" Width="230" Height="42"/>
+        <Button x:Name="lbRemoveTenant_Product" Content="Remove Tenant" HorizontalAlignment="Left" Margin="354,415,0,0" VerticalAlignment="Top" Width="210" Height="40"/>
+        <Button Content="Partial Payment" HorizontalAlignment="Left" Margin="650,485,0,0" VerticalAlignment="Top" Width="202" Height="30" Grid.ColumnSpan="2"/>
+        <Label x:Name="Current_Due_" Content="Current Due:" HorizontalAlignment="Left" Margin="647,548,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Payment" HorizontalAlignment="Left" Margin="638,384,0,0" VerticalAlignment="Top" Width="80" Height="33" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="646,439,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="24" Grid.ColumnSpan="2"/>
+        <Button Content="Payment In Full" HorizontalAlignment="Left" Margin="753,388,0,0" VerticalAlignment="Top" Width="110" Height="32" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="366,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" FontSize="16"/>
+        <Label x:Name="lbfirstName_AptProduct" Content="First Name           Apt# " HorizontalAlignment="Left" Margin="364,31,0,0" VerticalAlignment="Top" Width="178" FontSize="16"/>
+        <Label x:Name="lbLastName_Product" Content="Last Name " HorizontalAlignment="Left" Margin="367,108,0,0" VerticalAlignment="Top" Width="197" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="368,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="22"/>
+        <Label x:Name="lbMonthlyPayment_Product" Content="Monthly Payment" HorizontalAlignment="Left" Margin="359,182,0,0" VerticalAlignment="Top" Width="194" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="366,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="19" FontSize="16"/>
+        <Label x:Name="lbbedroomsProducts" Content="How Many Bedrooms" HorizontalAlignment="Left" Margin="363,260,0,0" VerticalAlignment="Top" Width="188" FontSize="14" Height="27"/>
+        <TextBox HorizontalAlignment="Left" Margin="370,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="20"/>
+        <Button Content="Add/Update Tenant" HorizontalAlignment="Left" Margin="374,334,0,0" VerticalAlignment="Top" Width="168" Height="34"/>
 
     </Grid>
 </Window>

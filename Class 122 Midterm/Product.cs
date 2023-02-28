@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Class_122_Midterm
 {
-    internal class Product
+    public class Product
     {
         string _name;
         string _sku;
